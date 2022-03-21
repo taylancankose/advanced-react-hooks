@@ -1,29 +1,19 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {CocktailProvider} from './context/CocktailContext'
+import UseRefExample2 from './components/useRef/UseRefExample2';
+import UseRefExample1 from './components/useRef/UseRefExample1';
+import UseRefExample3 from './components/useRef/UseRefExample3';
 
-import Navbar from './components/pages/Navbar'
-import Footer from './components/pages/Footer'
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import ClickedCocktail from './components/pages/ClickedCocktail';
-import Error from './components/pages/Error';
 
 
 function App() {
   return (
-    <Router>
-      <CocktailProvider>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/cocktail/:idDrink' element={<ClickedCocktail />} />
-        <Route path='/*' element={<Error />} />
-      </Routes>
-      <Footer />
-      </CocktailProvider>
-    </Router>
+    <div>
+      <UseRefExample1 />
+      <hr></hr>
+      <UseRefExample2 />
+      <hr></hr>
+      <UseRefExample3 />
+    </div>
   );
 }
 
